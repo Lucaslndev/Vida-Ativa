@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Cadastre-se para participar das atividades e projetos da ONG Vida Ativa."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Cadastro | Vida Ativa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.2.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="site-logo" href="index.html" aria-label="Vida Ativa, início">
+          <span class="logo-mark" aria-hidden="true"><i class="fa-solid fa-person-running"></i></span>
+          <span>Vida Ativa</span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+          <ul class="top-list">
+            <li><a class="nav-link" href="index.html#sobre">Sobre</a></li>
+            <li><a class="nav-link" href="index.html#como-funciona">Como funciona</a></li>
+            <li><a class="nav-link" href="index.html#impacto">Impacto</a></li>
+            <li><a class="nav-link" href="index.html#historias">Depoimentos</a></li>
+            <li><a class="nav-link" href="projetos.html">Projetos</a></li>
+            <li><a class="nav-link" href="cadastro.html">Cadastro</a></li>
+          </ul>
+          <a class="button button-primary header-cta" href="cadastro.html">
+            Participar <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="page-hero register-hero">
+        <div class="container page-hero-inner">
+          <div class="page-hero-copy">
+            <p class="eyebrow eyebrow-pill"><span></span> Cadastro</p>
+            <h1>Pronto para começar a viver com mais movimento?</h1>
+            <p class="page-hero-description">
+              Preencha os dados abaixo para se candidatar às atividades da ONG Vida Ativa. Este formulário é uma demonstração do front-end e não envia dados para nenhum backend.
+            </p>
+            <div class="info-band" aria-label="Atenção ao cadastro">
+              <span class="pill-badge">Dados pessoais</span>
+              <span class="pill-badge">Endereço</span>
+              <span class="pill-badge">Validação nativa</span>
+            </div>
+          </div>
+          <aside class="register-hero-card" aria-label="Informações do cadastro">
+            <strong>Como funciona</strong>
+            <p>Depois de validar suas informações, você pode usar esse cadastro como base para se inscrever em uma atividade, voluntariado ou apoio comunitário.</p>
+            <p>Nosso objetivo é manter a experiência simples, acessível e clara para quem chega pela primeira vez.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="register-shell">
+        <div class="container">
+          <form class="register-form" id="cadastro-form" novalidate>
+            <fieldset class="form-section">
+              <legend>Dados pessoais</legend>
+              <div class="form-grid">
+                <div class="form-field full">
+                  <label for="nome-completo">Nome completo <span class="required-tag" aria-label="Obrigatório">*</span></label>
+                  <input id="nome-completo" name="nome-completo" type="text" autocomplete="name" placeholder="Digite seu nome completo" required />
+                  <span class="field-hint">Use o nome como aparece em documentos pessoais.</span>
+                </div>
+
+                <div class="form-field">
+                  <label for="email">E-mail <span class="required-tag" aria-label="Obrigatório">*</span></label>
+                  <input id="email" name="email" type="email" autocomplete="email" placeholder="seuemail@exemplo.com" required />
+                </div>
+
+                <div class="form-field">
+                  <label for="cpf">CPF <span class="required-tag" aria-label="Obrigatório">*</span></label>
+                  <input id="cpf" name="cpf" type="text" inputmode="numeric" autocomplete="off" placeholder="000.000.000-00" maxlength="14" required />
+                </div>
+
+                <div class="form-field">
+                  <label for="telefone">Telefone <span class="required-tag" aria-label="Obrigatório">*</span></label>
+                  <input id="telefone" name="telefone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="(11) 99999-9999" maxlength="15" required />
+                </div>
+
+                <div class="form-field">
+                  <label for="data-nascimento">Data de nascimento <span class="required-tag" aria-label="Obrigatório">*</span></label>
+                  <input id="data-nascimento" name="data-nascimento" type="date" autocomplete="bday" min="1900-01-01" required />
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-section">
+              <legend>Endereço</legend>
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="cep">CEP</label>
+                  <input id="cep" name="cep" type="text" inputmode="numeric" autocomplete="postal-code" placeholder="00000-000" maxlength="9" />
+                </div>
+
+                <div class="form-field full">
+                  <label for="endereco">Endereço</label>
+                  <input id="endereco" name="endereco" type="text" autocomplete="street-address" placeholder="Rua, avenida, número e complemento" />
+                </div>
+
+                <div class="form-field">
+                  <label for="cidade">Cidade</label>
+                  <input id="cidade" name="cidade" type="text" autocomplete="address-level2" placeholder="Sua cidade" />
+                </div>
+
+                <div class="form-field">
+                  <label for="estado">Estado</label>
+                  <select id="estado" name="estado" autocomplete="address-level1">
+                    <option value="">Selecione</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                  </select>
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="form-actions">
+              <button class="button button-primary" type="submit">Enviar cadastro</button>
+              <button class="button button-light" type="reset">Limpar campos</button>
+            </div>
+            <p class="required-legend"><span aria-hidden="true">*</span> Campo obrigatório</p>
+            <p class="form-status-box" id="cadastro-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-main">
+          <div class="footer-brand">
+            <a class="site-logo site-logo-light" href="index.html"><span class="logo-mark" aria-hidden="true"><i class="fa-solid fa-person-running"></i></span><span>Vida Ativa</span></a>
+            <p>Movimento, acolhimento e oportunidade para uma vida mais saudável. Uma ONG brasileira feita para a comunidade.</p>
+          </div>
+          <div class="footer-column"><h3>Vida Ativa</h3><a href="index.html#sobre">Sobre nós</a><a href="index.html#como-funciona">Nossa proposta</a><a href="projetos.html">Projetos sociais</a><a href="index.html#contato">Fale conosco</a></div>
+          <div class="footer-column"><h3>Participe</h3><a href="cadastro.html">Atividades</a><a href="projetos.html#voluntariado">Seja voluntário</a><a href="projetos.html#doacoes">Doe agora</a><a href="cadastro.html">Leve para seu bairro</a></div>
+          <div class="footer-column"><h3>Informações</h3><a href="index.html#contato">Contato</a><a href="projetos.html#voluntariado">Perguntas frequentes</a><a href="cadastro.html">Cadastro</a><a href="index.html">Home</a></div>
+        </div>
+        <div class="footer-bottom"><span>© 2025 Vida Ativa. Todos os direitos reservados.</span><span>Feito com cuidado para quem move o mundo.</span></div>
+      </div>
+    </footer>
+  </body>
+</html>
