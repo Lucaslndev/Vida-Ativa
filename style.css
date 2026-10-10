@@ -256,21 +256,6 @@ textarea:focus-visible {
   background: var(--green);
 }
 
-.eyebrow-pill {
-  display: inline-flex;
-  padding: 5px 9px;
-  border-radius: 999px;
-  background: #fff;
-  font-size: 8px;
-  letter-spacing: 0.06em;
-}
-
-.eyebrow-pill > span {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-}
-
 h1,
 h2,
 h3,
@@ -1454,6 +1439,20 @@ a.contact-item:hover {
   .donation-panel,
   .register-form {
     padding: 18px 16px;
+  }
+
+  .form-actions {
+    gap: 8px;
+  }
+
+  .form-actions .button {
+    min-width: 0;
+    flex: 1 1 0;
+    padding-inline: 8px;
+  }
+
+  .form-actions button[type="reset"] {
+    order: -1;
   }
 
   .cta-band .page-panel {
